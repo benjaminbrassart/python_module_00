@@ -15,3 +15,7 @@ cookbook = {
         "prep_time": 15,
     },
 }
+
+def print_recipe_names():
+    for k in cookbook.keys():
+        print(k)
