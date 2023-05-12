@@ -28,6 +28,7 @@ def print_recipe_details():
 
     if recipe is None:
         print("invalid recipe")
+        return
 
     ingredients = recipe["ingredients"]
     meal = recipe["meal"]
@@ -37,3 +38,15 @@ def print_recipe_details():
     print(f"  Ingredients list: {recipe}")
     print(f"  To be eaten for {meal}.")
     print(f"  Takes {prep_time} minutes of cooking.")
+
+def delete_recipe():
+    print("Please enter a recipe name to delete:")
+    name = input(">> ")
+
+    deleted = cookbook.pop(name, None)
+
+    if deleted is None:
+        print("invalid recipe")
+        return
+
+    print(f"{name} deleted")
