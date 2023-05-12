@@ -1,7 +1,17 @@
-from time import sleep
+from time import sleep, time
+
+LINE_CLEAR = "\x1b[2K"
 
 def ft_progress(it):
+    start_time = time()
+    last_time = start_time
+    count_total = len(it)
+
     for elem in it:
+        elapsed = time() - start_time
+
+        print(f"| elapsed time {elapsed:.2f}s", end="\r")
+        # print(end=LINE_CLEAR)
         yield elem
 
 if __name__ == "__main__":
