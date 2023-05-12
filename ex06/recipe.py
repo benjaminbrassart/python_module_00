@@ -1,15 +1,15 @@
 cookbook = {
-    "Sandwhich": {
+    "sandwhich": {
         "ingredients": ["ham", "bread", "cheese", "tomatoes"],
         "meal": "lunch",
         "prep_time": 10,
     },
-    "Cake": {
+    "cake": {
         "ingredients": ["flour", "sugar", "eggs"],
         "meal": "dessert",
         "prep_time": 60,
     },
-    "Salad": {
+    "salad": {
         "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
         "meal": "lunch",
         "prep_time": 15,
