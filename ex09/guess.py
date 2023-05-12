@@ -7,7 +7,6 @@ print("Good luck!")
 print()
 
 n = randint(1, 99)
-n = 42
 tries = 0
 
 while True:
