@@ -50,3 +50,44 @@ def delete_recipe():
         return
 
     print(f"{name} deleted")
+
+def add_recipe():
+    print("Enter a name:")
+    name = input(">> ")
+
+    if name in cookbook:
+        print("{name} already exists")
+        return
+
+    print("Enter ingredients:")
+    ingredients = []
+
+    while True:
+        iname = input(">> ")
+
+        if len(iname) == 0:
+            break
+        
+        ingredients += iname
+
+    print("Enter a meal type:")
+    meal = input(">> ")
+
+    while True:
+
+        print("Enter a preparation time:")
+        ipt = input(">> ")
+
+        try:
+            prep_time = int(ipt)
+
+            if prep_time > 0:
+                break
+        except:
+            pass
+
+    cookbook[name] = {
+        "ingredients": ingredients,
+        "meal": meal,
+        "prep_time": prep_time,
+    }
