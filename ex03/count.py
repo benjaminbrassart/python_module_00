@@ -37,3 +37,16 @@ def text_analyzer(s = None):
     print(f'- {low} lower letter(s)')
     print(f'- {punct} punctuation mark(s)')
     print(f'- {space} space(s)')
+
+if __name__ == '__main__':
+    from sys import argv
+
+    if len(argv) <= 2:
+        s = None
+
+        if len(argv) == 2:
+            s = argv[1]
+
+        text_analyzer(s)
+    else:
+        print('too many arguments')
