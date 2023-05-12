@@ -10,10 +10,13 @@ MORSE = {
     "S": "", "T": "", "U": "", "V": "", "W": "", "X": "",
     "Y": "", "Z": "", "0": "", "1": "", "2": "", "3": "",
     "4": "", "5": "", "6": "", "7": "", "8": "", "9": "",
+    " ": "/",
 }
 
 s = ' '.join(argv[1:])
 codes = []
+
+print(s)
 
 for c in s:
     morse = MORSE.get(c.upper(), None)
@@ -24,4 +27,4 @@ for c in s:
 
     codes += morse
 
-print(' '.join(code))
+print(' '.join(codes))
