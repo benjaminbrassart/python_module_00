@@ -1,0 +1,34 @@
+import string
+
+def text_analyzer(s = None):
+    if s is None:
+        print('What is the text to analyze?')
+        s = input('>> ')
+        return text_analyzer(s)
+
+    if type(s) is not str:
+        print('argument is not a string')
+        return
+
+    up = 0
+    low = 0
+    space = 0
+    punct = 0
+
+    total = len(s)
+
+    for c in s:
+        if c.isupper():
+            up += 1
+        elif c.islower():
+            low += 1
+        elif c.isspace():
+            space += 1
+        elif c in string.punctuation:
+            punct += 1
+
+    print(f'The text contains {total} character(s):')
+    print(f'- {up} upper letter(s)')
+    print(f'- {low} lower letter(s)')
+    print(f'- {punct} punctuation mark(s)')
+    print(f'- {space} space(s)')
