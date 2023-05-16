@@ -68,7 +68,7 @@ def add_recipe():
         if len(iname) == 0:
             break
         
-        ingredients += iname
+        ingredients.append(iname)
 
     print("Enter a meal type:")
     meal = input(">> ")
